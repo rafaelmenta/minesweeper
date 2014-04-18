@@ -1,0 +1,31 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#" ng-click="newGame()">New Game</a></li>
+    <li>
+      <a ng-href="#" ng-click="endGame(validateGame())">Validate
+        <span ng-hide="gameModel.result !== undefined"> :|</span>
+        <span ng-show="gameModel.result === false"> :(</span>
+        <span ng-show="gameModel.result === true"> :)</span>
+      </a>
+    </li>
+    <li><a ng-href="#" ng-click="cheat()">Cheat</a></li>
+  </ul>
+  <h3 class="text-muted">minesweeper</h3>
+</div>
+
+<div class="jumbotron">
+  <div class="alert" ng-class="friendlyClass">{{getFriendlyMessage()}}</div>
+  <div class="row show-grid center" ng-repeat="row in gameModel.board.rows">
+    <div class="col-md-1" ng-repeat="cell in row.cols" ng-click="reveal(cell, $parent.$index, $index)">
+      <div ng-show="cell.show || (cell.hasBomb && gameModel.isCheating)">
+        <span ng-class="{'glyphicon glyphicon-certificate' : cell.hasBomb}"></span>
+        <span ng-hide="cell.hasBomb"
+              ng-class="getAdjacentClass(cell)"
+        >{{cell.adjacentMines}}</span>
+      </div>
+      <div ng-hide="cell.show || (cell.hasBomb && gameModel.isCheating)">
+        <span>&nbsp;</span>
+      </div>
+    </div>
+  </div>
+</div>

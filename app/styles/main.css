@@ -1,0 +1,107 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.show-grid {
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+.show-grid [class^="col-"] {
+  background-color: #ccc;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  box-shadow: 3px 3px 1px #888888;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.adjacent-1 {
+  color: #0893cf;
+}
+
+.adjacent-2 {
+  color: #478903;
+}
+
+.adjacent-3 {
+  color: #b11262;
+}
+
+.adjacent-4 {
+  color: #868686;
+}
+
+.adjacent-5 {
+  color: #e9d25e;
+}
+
+.adjacent-6 {
+  color: #437fa9;
+}
+
+.adjacent-7 {
+  color: #095879;
+}
+
+.adjacent-8 {
+  color: #000;
+}
+
+.show-cell {
+  background: #5e5e5e;
+}
